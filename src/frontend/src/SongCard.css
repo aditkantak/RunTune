@@ -1,0 +1,71 @@
+.song-card {
+  /* Box model and background to match the dark theme */
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.2em 1.6em; /* Slightly larger padding for a card */
+  background-color: #1a1a1a;
+  
+  /* Font and text color to match the app */
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.87);
+  
+  /* Use flexbox to align content (image and text) horizontally */
+  display: flex; 
+  align-items: left; /* Vertically center items */
+  gap: 1.5em; /* Space between album cover and text */
+  
+  /* Transition for hover effects */
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.song-card:hover {
+  border-color: #646cff; /* Matches the button hover effect */
+  box-shadow: 0 0 10px rgba(100, 108, 255, 0.3); /* Soft glow on hover */
+}
+
+.album-cover {
+  /* Ensure the image container is square and has fixed dimensions */
+  width: 80px; 
+  height: 80px;
+  flex-shrink: 0; /* Prevents the album cover from shrinking */
+  overflow: hidden; /* Hides any part of the image that overflows */
+  border-radius: 4px; /* A subtle border-radius for the cover */
+}
+
+.album-cover img {
+  /* Ensure the image fills the entire container */
+  width: 100%;
+  height: 100%;
+  
+  /* This is the key property for consistent formatting */
+  object-fit: cover; /* Crops the image to fill the space without distortion */
+  display: block; /* Removes extra space below the image */
+}
+
+/* Styles for the text */
+.song-card h3 {
+  margin: 0; /* Remove default margin for heading */
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.song-card .artist,
+.song-card .album {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.song-card {
+  /* ... (existing styles) ... */
+  display: flex; 
+  align-items: center; 
+  gap: 1.5em; 
+  /* ... (existing styles) ... */
+}
+
+/* New CSS class for the text container */
+.song-info {
+  text-align: left; /* This is the key change */
+}
