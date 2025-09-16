@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+input[type="number"] {
+  /* Basic box model and typography from the button */
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  /* margin-top: 1em; */
+  margin-bottom: 1em;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87); /* Matches root font color */
+  
+  /* Remove default browser styles */
+  outline: none;
+}
+
+/* Match the hover and focus states of the button */
+input[type="number"]:hover {
+  border-color: #646cff;
+}
+
+input[type="number"]:focus {
+  outline: 4px auto -webkit-focus-ring-color;
+  border-color: #646cff; /* Optional: Keep the border color consistent on focus */
+}
+
+/* Style the placeholder text */
+input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* A slightly faded version of the text color */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
