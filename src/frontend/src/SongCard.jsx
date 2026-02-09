@@ -1,11 +1,12 @@
 import defaultCover from './assets/default-cover.png';
 import './SongCard.css'
 
-const SongCard = ({ song, artist, album, albumCoverUrl }) => {
+const SongCard = ({ index, song, artist, album, albumCoverUrl }) => {
   const coverToDisplay = albumCoverUrl || defaultCover;
 
   return (
     <div className="song-card">
+      <span className="song-index">{index}</span>
       <div className="album-cover">
         <img src={coverToDisplay} alt={`Album cover for ${album}`} />
       </div>

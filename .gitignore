@@ -26,3 +26,6 @@ src/frontend/dist-ssr
 .env
 src/backend/venv
 src/backend/sample.json
+
+# Demo data (remove when real API is ready)
+src/frontend/src/demo-data/
